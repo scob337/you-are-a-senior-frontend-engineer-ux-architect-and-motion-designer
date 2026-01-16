@@ -1,0 +1,365 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "type": "single-select",
+      "showProgress": true,
+      "question": "ما هي لغتك الأم؟",
+      "options": [
+        { "id": "ar", "label": "العربية", "icon": "🇸🇦" },
+        { "id": "en", "label": "الإنجليزية", "icon": "🇬🇧" },
+        { "id": "fr", "label": "الفرنسية", "icon": "🇫🇷" },
+        { "id": "es", "label": "الإسبانية", "icon": "🇪🇸" },
+        { "id": "other", "label": "لغة أخرى", "icon": "🌍" }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 2,
+      "type": "card-select",
+      "showProgress": true,
+      "question": "ما هو مستواك الحالي في اللغة الإنجليزية؟",
+      "options": [
+        { "id": "beginner", "label": "مبتدئ", "description": "أعرف بعض الكلمات البسيطة", "image": "beginner" },
+        { "id": "elementary", "label": "أساسي", "description": "أستطيع تكوين جمل بسيطة", "image": "elementary" },
+        { "id": "intermediate", "label": "متوسط", "description": "أستطيع التحدث في مواضيع يومية", "image": "intermediate" },
+        { "id": "advanced", "label": "متقدم", "description": "أستطيع التحدث بطلاقة", "image": "advanced" }
+      ],
+      "requiresContinue": false
+    },
+    {
+      "id": 3,
+      "type": "info",
+      "showProgress": true,
+      "title": "انضم إلى ملايين المتعلمين",
+      "stats": [
+        { "value": "30M+", "label": "متعلم حول العالم" },
+        { "value": "4.8", "label": "تقييم التطبيق", "icon": "star" },
+        { "value": "#1", "label": "تطبيق تعليمي" }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 4,
+      "type": "single-select",
+      "showProgress": true,
+      "question": "لماذا تريد تعلم اللغة الإنجليزية؟",
+      "options": [
+        { "id": "travel", "label": "السفر", "icon": "✈️" },
+        { "id": "work", "label": "العمل", "icon": "💼" },
+        { "id": "gaming", "label": "الألعاب", "icon": "🎮" },
+        { "id": "self", "label": "تطوير الذات", "icon": "🚀" },
+        { "id": "study", "label": "الدراسة", "icon": "📚" }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 5,
+      "type": "single-select",
+      "showProgress": true,
+      "question": "ما هو مجال عملك؟",
+      "options": [
+        { "id": "tech", "label": "التكنولوجيا", "icon": "💻" },
+        { "id": "healthcare", "label": "الرعاية الصحية", "icon": "🏥" },
+        { "id": "education", "label": "التعليم", "icon": "🎓" },
+        { "id": "finance", "label": "المالية والبنوك", "icon": "🏦" },
+        { "id": "retail", "label": "التجارة", "icon": "🛒" },
+        { "id": "transport", "label": "النقل واللوجستيات", "icon": "🚛" },
+        { "id": "hospitality", "label": "الضيافة والسياحة", "icon": "🏨" },
+        { "id": "construction", "label": "البناء والهندسة", "icon": "🏗️" },
+        { "id": "media", "label": "الإعلام والترفيه", "icon": "📺" },
+        { "id": "government", "label": "القطاع الحكومي", "icon": "🏛️" },
+        { "id": "freelance", "label": "عمل حر", "icon": "🎯" },
+        { "id": "other", "label": "أخرى", "icon": "📋" }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 6,
+      "type": "single-select",
+      "showProgress": true,
+      "question": "ما هو دورك في مجال النقل أو اللوجستيات؟",
+      "subtitle": "نطرح هذا السؤال لتخصيص خطتك التعليمية",
+      "options": [
+        { "id": "driver", "label": "سائق", "icon": "🚗" },
+        { "id": "warehouse", "label": "إدارة المستودعات", "icon": "📦" },
+        { "id": "logistics", "label": "تخطيط لوجستي", "icon": "📊" },
+        { "id": "shipping", "label": "الشحن والتوصيل", "icon": "🚚" },
+        { "id": "customs", "label": "التخليص الجمركي", "icon": "📋" },
+        { "id": "fleet", "label": "إدارة الأسطول", "icon": "🚛" },
+        { "id": "other", "label": "دور آخر", "icon": "✨" }
+      ],
+      "requiresContinue": false
+    },
+    {
+      "id": 7,
+      "type": "single-select",
+      "showProgress": true,
+      "question": "ما هو المستوى الذي تطمح للوصول إليه؟",
+      "options": [
+        { "id": "a2", "label": "أساسي (A2)", "description": "فهم الجمل البسيطة" },
+        { "id": "b1", "label": "متوسط (B1)", "description": "التحدث في المواقف اليومية" },
+        { "id": "b2", "label": "فوق المتوسط (B2)", "description": "التحدث بطلاقة في العمل" },
+        { "id": "c1", "label": "متقدم (C1)", "description": "إتقان اللغة بشكل كامل" }
+      ],
+      "requiresContinue": false
+    },
+    {
+      "id": 8,
+      "type": "speaking-intro",
+      "showProgress": true,
+      "title": "مع ليرنا، تعلم الإنجليزية أصبح أسهل",
+      "subtitle": "عبر التحدث في الهاتف!",
+      "showMic": true,
+      "requiresContinue": true
+    },
+    {
+      "id": 9,
+      "type": "difficulty-check",
+      "showProgress": true,
+      "statement": "أجد صعوبة في فهم الإنجليزية عندما يتحدث الناس بسرعة",
+      "question": "هل ينطبق هذا عليك؟",
+      "options": [
+        { "id": "yes", "label": "صحيح", "value": 2 },
+        { "id": "partial", "label": "صحيح جزئيًا", "value": 1 },
+        { "id": "no", "label": "لا ينطبق عليّ", "value": 0 }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 10,
+      "type": "difficulty-check",
+      "showProgress": true,
+      "statement": "أتوقف أثناء الكلام بسبب قلة المفردات التي أعرفها",
+      "question": "هل ينطبق هذا عليك؟",
+      "options": [
+        { "id": "yes", "label": "صحيح", "value": 2 },
+        { "id": "partial", "label": "صحيح جزئيًا", "value": 1 },
+        { "id": "no", "label": "لا ينطبق عليّ", "value": 0 }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 11,
+      "type": "difficulty-check",
+      "showProgress": true,
+      "statement": "أحياناً أكوّن جملاً خاطئة نحوياً عند التحدث",
+      "question": "هل ينطبق هذا عليك؟",
+      "options": [
+        { "id": "yes", "label": "صحيح", "value": 2 },
+        { "id": "partial", "label": "صحيح جزئيًا", "value": 1 },
+        { "id": "no", "label": "لا ينطبق عليّ", "value": 0 }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 12,
+      "type": "difficulty-check",
+      "showProgress": true,
+      "statement": "أفهم الإنجليزية لكن لا أستطيع التحدث بها",
+      "question": "هل ينطبق هذا عليك؟",
+      "options": [
+        { "id": "yes", "label": "صحيح", "value": 2 },
+        { "id": "partial", "label": "صحيح جزئيًا", "value": 1 },
+        { "id": "no", "label": "لا ينطبق عليّ", "value": 0 }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 13,
+      "type": "difficulty-check",
+      "showProgress": true,
+      "statement": "أستطيع التحدث لكن بدون طلاقة كافية",
+      "question": "هل ينطبق هذا عليك؟",
+      "options": [
+        { "id": "yes", "label": "صحيح", "value": 2 },
+        { "id": "partial", "label": "صحيح جزئيًا", "value": 1 },
+        { "id": "no", "label": "لا ينطبق عليّ", "value": 0 }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 14,
+      "type": "difficulty-check",
+      "showProgress": true,
+      "statement": "ليس لدي شريك لممارسة اللغة معه",
+      "question": "هل ينطبق هذا عليك؟",
+      "options": [
+        { "id": "yes", "label": "صحيح", "value": 2 },
+        { "id": "partial", "label": "صحيح جزئيًا", "value": 1 },
+        { "id": "no", "label": "لا ينطبق عليّ", "value": 0 }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 15,
+      "type": "difficulty-check",
+      "showProgress": true,
+      "statement": "أجد صعوبة في مشاهدة الأفلام الإنجليزية بدون ترجمة",
+      "question": "هل ينطبق هذا عليك؟",
+      "options": [
+        { "id": "yes", "label": "صحيح", "value": 2 },
+        { "id": "partial", "label": "صحيح جزئيًا", "value": 1 },
+        { "id": "no", "label": "لا ينطبق عليّ", "value": 0 }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 16,
+      "type": "single-select",
+      "showProgress": true,
+      "question": "ما المجال الذي ترغب في تحسينه أكثر؟",
+      "options": [
+        { "id": "speaking", "label": "التحدث", "icon": "🗣️" },
+        { "id": "listening", "label": "الاستماع", "icon": "👂" },
+        { "id": "vocabulary", "label": "المفردات", "icon": "📖" }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 17,
+      "type": "info-program",
+      "showProgress": true,
+      "title": "ينشئ ليرنا برنامجًا مخصصًا لك!",
+      "subtitle": "يساعدك على تقوية نقاط ضعفك تدريجيًا",
+      "requiresContinue": true
+    },
+    {
+      "id": 18,
+      "type": "vocabulary-test",
+      "showProgress": true,
+      "title": "اختر جميع الكلمات التي تعرفها",
+      "subtitle": "المستوى: A1-A2",
+      "words": ["Hello", "Thank you", "Goodbye", "Please", "Yes", "No", "Water", "Food", "Help", "Sorry", "Friend", "Family", "Home", "Work", "School", "Time", "Day", "Night", "Good", "Bad"],
+      "requiresContinue": true
+    },
+    {
+      "id": 19,
+      "type": "vocabulary-test",
+      "showProgress": true,
+      "title": "اختر جميع الكلمات التي تعرفها",
+      "subtitle": "المستوى: B1-B2",
+      "words": ["Achievement", "Opportunity", "Environment", "Communicate", "Experience", "Challenge", "Solution", "Improve", "Knowledge", "Decision", "Progress", "Success", "Develop", "Analyze", "Consider", "Require", "Benefit", "Approach", "Strategy", "Efficient"],
+      "requiresContinue": true
+    },
+    {
+      "id": 20,
+      "type": "vocabulary-test",
+      "showProgress": true,
+      "title": "اختر جميع الكلمات التي تعرفها",
+      "subtitle": "المستوى: C1-C2",
+      "words": ["Ubiquitous", "Paramount", "Exemplify", "Comprehensive", "Substantial", "Acknowledge", "Eloquent", "Ambiguous", "Pragmatic", "Meticulous", "Coherent", "Profound", "Intricate", "Inevitable", "Compelling", "Nuance", "Pervasive", "Discrepancy", "Facilitate", "Unprecedented"],
+      "requiresContinue": true
+    },
+    {
+      "id": 21,
+      "type": "info-simple",
+      "showProgress": true,
+      "title": "دعنا نجيب على بعض الأسئلة الإضافية",
+      "subtitle": "حتى يتمكن ليرنا من تخصيص برنامجك بدقة",
+      "requiresContinue": true
+    },
+    {
+      "id": 22,
+      "type": "multi-select",
+      "showProgress": true,
+      "question": "ما هي اهتماماتك الشخصية؟",
+      "subtitle": "اختر كل ما ينطبق",
+      "options": [
+        { "id": "music", "label": "الموسيقى", "icon": "🎵" },
+        { "id": "sports", "label": "الرياضة", "icon": "⚽" },
+        { "id": "reading", "label": "القراءة", "icon": "📚" },
+        { "id": "movies", "label": "الأفلام", "icon": "🎬" },
+        { "id": "cooking", "label": "الطبخ", "icon": "👨‍🍳" },
+        { "id": "travel", "label": "السفر", "icon": "✈️" },
+        { "id": "tech", "label": "التكنولوجيا", "icon": "💻" },
+        { "id": "art", "label": "الفن", "icon": "🎨" },
+        { "id": "nature", "label": "الطبيعة", "icon": "🌿" },
+        { "id": "business", "label": "الأعمال", "icon": "📈" }
+      ],
+      "requiresContinue": true
+    },
+    {
+      "id": 23,
+      "type": "analysis",
+      "showProgress": false,
+      "phases": [
+        { "progress": 20, "text": "جاري إنشاء تجربتك الشخصية..." },
+        { "progress": 35, "text": "إنشاء مواضيع متنوعة ✓" },
+        { "progress": 50, "text": "تحضير حوارات تفاعلية..." },
+        { "progress": 65, "text": "تحسين مسار التعلم..." },
+        { "progress": 80, "text": "إنهاء خطتك..." }
+      ],
+      "popups": [
+        {
+          "triggerProgress": 35,
+          "question": "ما هو هدفك اليومي للتدريب؟",
+          "options": [
+            { "id": "5min", "label": "5 دقائق" },
+            { "id": "10min", "label": "10 دقائق" },
+            { "id": "15min", "label": "15 دقيقة" }
+          ],
+          "progressJump": 65
+        },
+        {
+          "triggerProgress": 80,
+          "question": "متى ترغب في بدء تدريبك اليومي؟",
+          "type": "time",
+          "progressJump": 100
+        }
+      ],
+      "testimonial": {
+        "text": "ليرنا غيّر حياتي! أصبحت أتحدث الإنجليزية بثقة بعد شهرين فقط",
+        "author": "أحمد - السعودية"
+      }
+    },
+    {
+      "id": 24,
+      "type": "email-capture",
+      "showProgress": false,
+      "title": "احصل على خطتك المخصصة",
+      "badges": [
+        { "icon": "users", "text": "30M+ متعلم" },
+        { "icon": "award", "text": "#1 تطبيق تعليمي" }
+      ],
+      "checkboxes": [
+        { "id": "updates", "label": "أرغب في تلقي التحديثات والنصائح" },
+        { "id": "terms", "label": "أوافق على الشروط وسياسة الخصوصية", "required": true }
+      ]
+    },
+    {
+      "id": 25,
+      "type": "result",
+      "showProgress": false,
+      "title": "نتيجة تقييمك",
+      "levels": ["A1", "A2", "B1", "B2", "C1"],
+      "motivationalText": "أنت على الطريق الصحيح! مع ليرنا، ستتمكن من تحسين مستواك بشكل ملحوظ خلال أسابيع قليلة. برنامجك المخصص جاهز لمساعدتك على تحقيق أهدافك."
+    },
+    {
+      "id": 26,
+      "type": "name-input",
+      "showProgress": false,
+      "title": "ما اسمك؟",
+      "placeholder": "أدخل اسمك هنا",
+      "requiresContinue": true
+    },
+    {
+      "id": 27,
+      "type": "progress-chart",
+      "showProgress": false,
+      "title": "{name}، خطتك التعليمية المخصصة جاهزة!",
+      "chartData": {
+        "current": "المستوى الحالي",
+        "after4weeks": "بعد 4 أسابيع - تحدث بطلاقة",
+        "otherApps": "التطبيقات الأخرى"
+      },
+      "requiresContinue": true
+    },
+    {
+      "id": 28,
+      "type": "redirect",
+      "showProgress": false,
+      "redirectUrl": "https://learna.app"
+    }
+  ]
+}
