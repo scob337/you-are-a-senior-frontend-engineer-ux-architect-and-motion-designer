@@ -1,12 +1,14 @@
 import { AnimatePresence } from 'framer-motion';
 import { useAssessment } from '@/hooks/useAssessment';
 import { ProgressBar } from './ProgressBar';
-import { SingleSelectStep } from './steps/SingleSelectStep';
+import { BackButton } from './BackButton';
+import { LanguageSelectStep } from './steps/LanguageSelectStep';
+import { CardGridSelectStep } from './steps/CardGridSelectStep';
 import { CardSelectStep } from './steps/CardSelectStep';
 import { InfoStep } from './steps/InfoStep';
 import { SpeakingIntroStep } from './steps/SpeakingIntroStep';
 import { DifficultyCheckStep } from './steps/DifficultyCheckStep';
-import { MultiSelectStep } from './steps/MultiSelectStep';
+import { InterestsSelectStep } from './steps/InterestsSelectStep';
 import { VocabularyTestStep } from './steps/VocabularyTestStep';
 import { InfoSimpleStep } from './steps/InfoSimpleStep';
 import { InfoProgramStep } from './steps/InfoProgramStep';
@@ -27,6 +29,7 @@ export function StepRenderer() {
     setUserEmail,
     calculateResults,
     nextStep,
+    prevStep,
     getCurrentStepData,
     getProgress,
   } = useAssessment();
@@ -47,8 +50,43 @@ export function StepRenderer() {
   const renderStep = () => {
     switch (stepData.type) {
       case 'single-select':
+        // Step 1: Language selection with dropdown
+        if (stepData.id === 1) {
+          return (
+            <LanguageSelectStep
+              question={stepData.question || ''}
+              onComplete={(answer) => handleComplete(answer)}
+            />
+          );
+        }
+        // Steps 4, 5, 7, 16: Card grid selection
+        if ([4, 5, 7, 16].includes(stepData.id)) {
+          return (
+            <CardGridSelectStep
+              question={stepData.question || ''}
+              subtitle={stepData.subtitle}
+              options={stepData.options || []}
+              columns={stepData.id === 5 ? 3 : 2}
+              requiresContinue={stepData.requiresContinue || false}
+              onComplete={(answer) => handleComplete(answer)}
+            />
+          );
+        }
+        // Step 6: Auto-advance card grid
+        if (stepData.id === 6) {
+          return (
+            <CardGridSelectStep
+              question={stepData.question || ''}
+              subtitle={stepData.subtitle}
+              options={stepData.options || []}
+              columns={2}
+              requiresContinue={false}
+              onComplete={(answer) => handleComplete(answer)}
+            />
+          );
+        }
         return (
-          <SingleSelectStep
+          <CardGridSelectStep
             question={stepData.question || ''}
             subtitle={stepData.subtitle}
             options={stepData.options || []}
@@ -99,7 +137,7 @@ export function StepRenderer() {
 
       case 'multi-select':
         return (
-          <MultiSelectStep
+          <InterestsSelectStep
             question={stepData.question || ''}
             subtitle={stepData.subtitle}
             options={stepData.options || []}
@@ -194,6 +232,7 @@ export function StepRenderer() {
             title={stepData.title || ''}
             chartData={stepData.chartData || { current: '', after4weeks: '', otherApps: '' }}
             userName={state.userName}
+            estimatedLevel={state.estimatedLevel}
             onComplete={() => handleComplete()}
           />
         );
@@ -210,12 +249,26 @@ export function StepRenderer() {
     }
   };
 
+  const showBackButton = state.currentStep > 1 && !['analysis', 'redirect'].includes(stepData.type);
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      {/* Header with Progress */}
+      {/* Header with Progress and Back Button */}
       {stepData.showProgress && (
         <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border">
-          <ProgressBar progress={getProgress()} />
+          <div className="flex items-center gap-3 px-4 py-2">
+            {showBackButton && <BackButton onClick={prevStep} />}
+            <div className="flex-1">
+              <ProgressBar progress={getProgress()} />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Back button when no progress bar */}
+      {!stepData.showProgress && showBackButton && (
+        <div className="absolute top-4 right-4 z-10">
+          <BackButton onClick={prevStep} />
         </div>
       )}
 
