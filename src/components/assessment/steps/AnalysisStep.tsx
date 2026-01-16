@@ -190,15 +190,13 @@ export function AnalysisStep({ phases, popups, testimonial, onComplete }: Analys
                   <input
                     type="time"
                     value={timeValue}
-                    onChange={(e) => setTimeValue(e.target.value)}
+                    onChange={(e) => {
+                      setTimeValue(e.target.value);
+                      // Auto-close after selecting time
+                      setTimeout(() => handlePopupSelect(activePopup), 500);
+                    }}
                     className="w-full p-4 text-center text-2xl border-2 border-border rounded-xl bg-card text-foreground focus:border-primary focus:outline-none"
                   />
-                  <button
-                    onClick={() => handlePopupSelect(activePopup)}
-                    className="w-full py-4 gradient-primary text-primary-foreground rounded-xl font-semibold"
-                  >
-                    تأكيد
-                  </button>
                 </div>
               ) : (
                 <div className="space-y-3">
