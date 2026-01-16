@@ -146,7 +146,7 @@ export function ProgressChartStep({ title, chartData, userName, estimatedLevel =
       >
         <div className="flex items-center gap-1">
           <div className="w-3 h-1 rounded-full gradient-primary" />
-          <span>ليرنا: تقدم سريع</span>
+          <span>BeFluent: تقدم سريع</span>
         </div>
         <div className="flex items-center gap-1">
           <div className="w-3 h-1 rounded-full bg-muted-foreground/30" />
