@@ -347,7 +347,7 @@
       "id": 27,
       "type": "progress-chart",
       "showProgress": false,
-      "title": "{name}، خطتك التعليمية المخصصة جاهزة!",
+      "title": "${name}، خطتك التعليمية المخصصة جاهزة!",
       "chartData": {
         "current": "المستوى الحالي",
         "after4weeks": "بعد 4 أسابيع - تحدث بطلاقة",
@@ -359,7 +359,7 @@
       "id": 28,
       "type": "redirect",
       "showProgress": false,
-      "redirectUrl": "https://learna.app"
+      "redirectUrl": "https://salla.sa/befluent/ABrDeNb"
     }
   ]
 }

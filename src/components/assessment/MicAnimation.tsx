@@ -4,7 +4,6 @@ import { Mic } from 'lucide-react';
 export function MicAnimation() {
   return (
     <div className="relative flex items-center justify-center">
-      {/* Outer pulse rings */}
       {[0, 1, 2].map((i) => (
         <motion.div
           key={i}
