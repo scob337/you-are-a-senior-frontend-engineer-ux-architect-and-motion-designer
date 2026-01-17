@@ -9,6 +9,7 @@ interface RedirectStepProps {
 export function RedirectStep({ redirectUrl }: RedirectStepProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
+      localStorage.clear()
       window.location.href = redirectUrl;
     }, 2000);
 
@@ -31,7 +32,7 @@ export function RedirectStep({ redirectUrl }: RedirectStepProps) {
         </div>
       </motion.div>
 
-      <motion.h2 
+      <motion.h2
         className="text-2xl font-bold text-foreground text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
