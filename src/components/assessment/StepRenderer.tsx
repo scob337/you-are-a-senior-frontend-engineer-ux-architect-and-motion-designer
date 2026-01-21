@@ -18,6 +18,7 @@ import { ResultStep } from './steps/ResultStep';
 import { NameInputStep } from './steps/NameInputStep';
 import { ProgressChartStep } from './steps/ProgressChartStep';
 import { RedirectStep } from './steps/RedirectStep';
+import BefluentOffer from './steps/Offers/Offers';
 
 export function StepRenderer() {
   const {
@@ -233,6 +234,13 @@ export function StepRenderer() {
             chartData={stepData.chartData || { current: '', after4weeks: '', otherApps: '' }}
             userName={state.userName}
             estimatedLevel={state.estimatedLevel}
+            onComplete={() => handleComplete()}
+          />
+        );
+
+      case 'offers':
+        return (
+          <BefluentOffer
             onComplete={() => handleComplete()}
           />
         );

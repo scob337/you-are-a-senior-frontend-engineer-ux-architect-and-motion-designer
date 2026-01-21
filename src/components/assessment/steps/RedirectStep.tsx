@@ -38,7 +38,7 @@ export function RedirectStep({ redirectUrl }: RedirectStepProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        جاري تحويلك إلى التطبيق...
+خطوة واحدة وتتكلم إنجليزي بثقة 🔥
       </motion.h2>
 
       <motion.div

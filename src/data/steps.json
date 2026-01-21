@@ -357,6 +357,42 @@
     },
     {
       "id": 28,
+      "type": "offers",
+      "showProgress": false,
+      "title": "BeFluent",
+      "subtitle": "احصل على وصول غير محدود",
+      "discount": "60%",
+      "discountTimer": "7:17",
+      "features": [
+        "📘 تدريبات تفاعلية بلا حدود",
+        "📝 خطة دراسة مصممة خصيصًا لك",
+        "💯 ملاحظات فورية من الذكاء الاصطناعي",
+        "⛳ تابع تقدمك وتحكم في مسارك"
+      ],
+      "plans": [
+        {
+          "duration": "سنة واحدة",
+          "pricePerDay": "6.36 ريال",
+          "originalPerDay": "16.67 ريال",
+          "discount": "وفر 60%",
+          "totalPrice": "199 ريال",
+          "originalTotal": "500 ريال",
+          "highlighted": true
+        },
+        {
+          "duration": "3 شهور",
+          "pricePerDay": "3.33 ريال",
+          "originalPerDay": "10 ريال",
+          "discount": "وفر 67%",
+          "totalPrice": "100 ريال",
+          "originalTotal": "300 ريال",
+          "highlighted":true
+        }
+        
+      ]
+    },
+    {
+      "id": 29,
       "type": "redirect",
       "showProgress": false,
       "redirectUrl": "https://salla.sa/befluent/lvDjzlG"
