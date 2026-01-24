@@ -38,14 +38,14 @@ const PlanCard: React.FC<PlanCardProps> = ({
       <span className="font-semibold">{duration}</span>
 
       <div className="bg-sky-400 text-white text-sm px-2 py-1 rounded-full w-fit">
-        {discount}
+        {discount} 
       </div>
 
       <div className="mt-2 flex gap-2 font-normal text-sm">
         <span className="text-red-500  line-through block">
-          {originalTotal}
+          {originalTotal} <img src="/rial.svg" className="w-6 h-6" alt="Rial" />
         </span>
-        <span className="font-semibold block">{totalPrice}</span>
+        <span className="font-semibold block">{totalPrice} <img src="/rial.svg" className="w-6 h-6" alt="Rial" /></span>
       </div>
 
 
@@ -56,15 +56,17 @@ const PlanCard: React.FC<PlanCardProps> = ({
     <div className="flex flex-col items-end gap-2 text-left">
 <div>
   
-<div className="flex gap-8 relative">
+<div className="flex gap-4 relative">
               {originalPerDay && (
         <div className="text-sm text-red-500 line-through">
-          {originalPerDay} 
+          <span className="flex gap-1 items-center">
+
+          {originalPerDay} {+originalPerDay >=1 ? <img src="/rial.svg" className="w-6 h-6" alt="Rial" /> :"هلله"}
+          </span>
         </div>
       )}
-      <span className="absolute left-8 font-bold text-gray-400 text-4xl"> 1</span>
         <div className="font-bold  text-[12px] flex flex-col">
-          <span className="text-gray-400">{pricePerDay}</span>
+          <span className="text-gray-400">{pricePerDay} {+pricePerDay >=1 ? <img src="/rial.svg" alt="Rial" /> :"هلله"}</span>
       <span className="text-gray-400">يوميًا</span>
 
         </div>
@@ -133,7 +135,7 @@ const BefluentOffer: React.FC<BefluentOfferProps> = ({ onComplete }) => {
           </div>
           <PlanCard
             title="سنة واحدة"
-            pricePerDay="6.36 "
+            pricePerDay="0.545"
             originalPerDay="16.67 "
             duration="سنة واحدة"
             discount="وفر 60%"  
@@ -141,7 +143,6 @@ const BefluentOffer: React.FC<BefluentOfferProps> = ({ onComplete }) => {
             originalTotal="500 "
             highlighted={false}
             rounded={false}
-
           />
           <PlanCard
             title="3 شهور"
@@ -150,7 +151,7 @@ const BefluentOffer: React.FC<BefluentOfferProps> = ({ onComplete }) => {
             duration="3 شهور"
             discount="وفر 67%"  
             totalPrice="100 "
-            originalTotal="300 "
+            originalTotal="300"
             highlighted={true}
             rounded={true}
           />
