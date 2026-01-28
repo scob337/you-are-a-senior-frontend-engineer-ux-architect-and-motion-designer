@@ -190,18 +190,18 @@ export function StepRenderer() {
           />
         );
 
-      case 'email-capture':
-        return (
-          <EmailCaptureStep
-            title={stepData.title || ''}
-            badges={stepData.badges || []}
-            checkboxes={stepData.checkboxes || []}
-            onComplete={(email) => {
-              setUserEmail(email);
-              handleComplete(email);
-            }}
-          />
-        );
+      // case 'email-capture':
+      //   return (
+      //     <EmailCaptureStep
+      //       title={stepData.title || ''}
+      //       badges={stepData.badges || []}
+      //       checkboxes={stepData.checkboxes || []}
+      //       onComplete={(email) => {
+      //         setUserEmail(email);
+      //         handleComplete(email);
+      //       }}
+      //     />
+      //   );
 
       case 'result':
         return (

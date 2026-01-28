@@ -151,6 +151,17 @@ export function useAssessment() {
     setState(initialState);
   }, []);
 
+  const clearResults = useCallback(() => {
+    const newState = {
+      ...state,
+      vocabularyScores: [],
+      difficultyScores: [],
+      estimatedLevel: 'A1',
+      estimatedVocabulary: 0,
+    };
+    saveState(newState);
+  }, [state, saveState]);
+
   const getCurrentStepData = useCallback(() => {
     return stepsData.steps.find(s => s.id === state.currentStep);
   }, [state.currentStep]);
@@ -172,6 +183,7 @@ export function useAssessment() {
     prevStep,
     goToStep,
     resetAssessment,
+    clearResults,
     getCurrentStepData,
     getProgress,
   };

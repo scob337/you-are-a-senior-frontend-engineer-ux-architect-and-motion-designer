@@ -88,6 +88,7 @@ interface BefluentOfferProps {
 }
 
 const BefluentOffer: React.FC<BefluentOfferProps> = ({ onComplete }) => {
+  const [hoveredPlan, setHoveredPlan] = React.useState<string | null>("year");
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center p-4">
       <div className="w-full max-w-md bg-white s shadow p-4">
@@ -129,34 +130,46 @@ const BefluentOffer: React.FC<BefluentOfferProps> = ({ onComplete }) => {
         </ul>
 
         {/* Plans */}
-        <div>
-          <div className="text-center text-sm bg-sky-500 text-white py-1 rounded-t-lg">
-            الأكثر شعبية
-          </div>
-          <PlanCard
-            title="سنة واحدة"
-            pricePerDay="0.545"
-            originalPerDay="16.67 "
-            duration="سنة واحدة"
-            discount="وفر 60%"  
-            totalPrice="199 "
-            originalTotal="500 "
-            highlighted={false}
-            rounded={false}
-          />
-          <PlanCard
-            title="3 شهور"
-            pricePerDay="3.33 "
-            originalPerDay="10 "
-            duration="3 شهور"
-            discount="وفر 67%"  
-            totalPrice="100 "
-            originalTotal="300"
-            highlighted={true}
-            rounded={true}
-          />
+<div>
+  <div className="text-center text-sm bg-sky-500 text-white py-1 rounded-t-lg">
+    الأكثر شعبية
+  </div>
 
-        </div>
+  <div
+    onMouseEnter={() => setHoveredPlan("year")}
+    onMouseLeave={() => setHoveredPlan(null)}
+  >
+    <PlanCard
+      title="سنة واحدة"
+      pricePerDay="0.545"
+      originalPerDay="16.67"
+      duration="سنة واحدة"
+      discount="وفر 60%"
+      totalPrice="199"
+      originalTotal="500"
+      highlighted={hoveredPlan === "year"}
+      rounded={false}
+    />
+  </div>
+
+  <div
+    onMouseEnter={() => setHoveredPlan("3months")}
+    onMouseLeave={() => setHoveredPlan("year")}
+  >
+    <PlanCard
+      title="3 شهور"
+      pricePerDay="1.11"
+      originalPerDay="3.33"
+      duration="3 شهور"
+      discount="وفر 67%"
+      totalPrice="100"
+      originalTotal="300"
+      highlighted={hoveredPlan === "3months"}
+      rounded={true}
+    />
+  </div>
+</div>
+
 
         {/* CTA */}
         <button 

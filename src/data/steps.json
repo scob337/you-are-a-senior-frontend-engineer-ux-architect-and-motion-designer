@@ -315,20 +315,6 @@
     },
     {
       "id": 24,
-      "type": "email-capture",
-      "showProgress": false,
-      "title": "احصل على خطتك المخصصة",
-      "badges": [
-        { "icon": "users", "text": "30M+ متعلم" },
-        { "icon": "award", "text": "#1 تطبيق تعليمي" }
-      ],
-      "checkboxes": [
-        { "id": "updates", "label": "أرغب في تلقي التحديثات والنصائح" },
-        { "id": "terms", "label": "أوافق على الشروط وسياسة الخصوصية", "required": true }
-      ]
-    },
-    {
-      "id": 25,
       "type": "result",
       "showProgress": false,
       "title": "نتيجة تقييمك",
@@ -336,7 +322,7 @@
       "motivationalText": "أنت على الطريق الصحيح! مع BeFluent، ستتمكن من تحسين مستواك بشكل ملحوظ خلال أسابيع قليلة. برنامجك المخصص جاهز لمساعدتك على تحقيق أهدافك."
     },
     {
-      "id": 26,
+      "id": 25,
       "type": "name-input",
       "showProgress": false,
       "title": "ما اسمك؟",
@@ -344,7 +330,7 @@
       "requiresContinue": true
     },
     {
-      "id": 27,
+      "id": 26,
       "type": "progress-chart",
       "showProgress": false,
       "title": "${name}، خطتك التعليمية المخصصة جاهزة!",
@@ -356,7 +342,7 @@
       "requiresContinue": true
     },
     {
-      "id": 28,
+      "id": 27,
       "type": "offers",
       "showProgress": false,
       "title": "BeFluent",
@@ -392,7 +378,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": 28,
       "type": "redirect",
       "showProgress": false,
       "redirectUrl": "https://salla.sa/befluent/lvDjzlG"
