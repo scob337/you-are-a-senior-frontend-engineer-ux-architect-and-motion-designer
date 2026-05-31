@@ -2,7 +2,7 @@
   "app": {
     "name": "BeFluent",
     "tagline": "تعلم الإنجليزية بطريقة ذكية",
-    "logo": "/logo.jpeg"
+    "logo": "/Logo.webp"
   },
   "emailjs": {
     "serviceId": "YOUR_SERVICE_ID",
