@@ -356,24 +356,15 @@
         "⛳ تابع تقدمك وتحكم في مسارك"
       ],
       "plans": [
-        {
-          "duration": "سنة واحدة",
-          "pricePerDay": "6.36 ريال",
-          "originalPerDay": "16.67 ريال",
-          "discount": "وفر 60%",
-          "totalPrice": "199 ريال",
-          "originalTotal": "500 ريال",
-          "highlighted": true
-        },
-        {
-          "duration": "3 شهور",
-          "pricePerDay": "3.33 ريال",
-          "originalPerDay": "10 ريال",
-          "discount": "وفر 67%",
-          "totalPrice": "100 ريال",
-          "originalTotal": "300 ريال",
-          "highlighted":true
-        }
+{
+  "duration": "سنة واحدة",
+  "pricePerDay": "0.41 ريال",
+  "originalPerDay": "1.02 ريال",
+  "discount": "وفر 60%",
+  "totalPrice": "149 ريال",
+  "originalTotal": "372.50 ريال",
+  "highlighted": true
+}
         
       ]
     },
